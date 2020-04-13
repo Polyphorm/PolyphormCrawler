@@ -1,6 +1,9 @@
 {
   "name": "@polyphorm/crawler",
   "version": "1.0.0",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://doojin@github.com/Polyphorm/PolyphormCrawler.git"
@@ -13,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Polyphorm/PolyphormCrawler/issues"
   },
-  "homepage": "https://github.com/Polyphorm/PolyphormCrawler#readme"
+  "homepage": "https://github.com/Polyphorm/PolyphormCrawler#readme",
+  "devDependencies": {
+    "@polyphorm/eslint-config": "^1.0.1",
+    "eslint": "^6.8.0"
+  }
 }
