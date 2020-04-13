@@ -1,0 +1,17 @@
+{
+  "name": "@polyphorm/crawler",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://doojin@github.com/Polyphorm/PolyphormCrawler.git"
+  },
+  "author": {
+    "name": "Dmitry Papka",
+    "email": "dmitry.papka@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Polyphorm/PolyphormCrawler/issues"
+  },
+  "homepage": "https://github.com/Polyphorm/PolyphormCrawler#readme"
+}
