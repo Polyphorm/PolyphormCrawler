@@ -2,7 +2,8 @@
   "name": "@polyphorm/crawler",
   "version": "1.0.0",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "bootstrap": "lerna bootstrap"
   },
   "repository": {
     "type": "git",
