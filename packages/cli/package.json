@@ -1,8 +1,10 @@
 {
-  "name": "cli",
+  "name": "@polyphorm/crawler-cli",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-  },
-  "license": "ISC"
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^15.3.1"
+  }
 }
