@@ -2,8 +2,10 @@
   "name": "@polyphorm/crawler",
   "version": "1.0.0",
   "scripts": {
-    "lint": "eslint .",
-    "bootstrap": "lerna bootstrap --hoist"
+    "bootstrap": "lerna bootstrap --hoist",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "checks": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
