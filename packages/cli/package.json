@@ -2,9 +2,18 @@
   "name": "@polyphorm/crawler-cli",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ."
+  },
   "license": "ISC",
   "dependencies": {
-    "yargs": "^15.3.1"
+    "@polyphorm/crawler-manager": "^1.0.0",
+    "@polyphorm/crawler-worker": "^1.0.0",
+    "commander": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^25.4.0"
   }
 }

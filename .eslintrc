@@ -1,3 +1,7 @@
 {
-  "extends": "@polyphorm"
+  "extends": "@polyphorm",
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true
+  }
 }
