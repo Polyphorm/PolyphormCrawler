@@ -2,9 +2,14 @@
   "name": "@polyphorm/crawler-scheduler",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest --config=../../jest.config.js"
+  },
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.9.10"
+    "@polyphorm/crawler-mongo": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0"
   }
 }

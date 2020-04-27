@@ -2,7 +2,9 @@
   "name": "@polyphorm/crawler-mongo",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-  },
-  "license": "ISC"
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.10"
+  }
 }

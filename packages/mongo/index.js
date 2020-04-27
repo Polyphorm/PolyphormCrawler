@@ -1,13 +1,22 @@
 const mongoose = require('mongoose')
 
 const instance = new mongoose.Mongoose()
+let conn
 
 module.exports = {
-  connect (connectionString) {
-    instance.connect(connectionString)
+  async connect (connectionString) {
+    conn = await instance.connect(connectionString)
   },
 
-  get () {
+  getInstance () {
     return instance
+  },
+
+  getConnection () {
+    return conn.connection
+  },
+
+  async disconnect () {
+    await instance.disconnect()
   }
 }
