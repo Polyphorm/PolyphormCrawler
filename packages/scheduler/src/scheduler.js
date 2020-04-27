@@ -1,4 +1,4 @@
-const Job = require('./model/job')
+const Job = require('./model/jobDefinition')
 
 module.exports = {
   async getSchedule () {
