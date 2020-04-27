@@ -7,7 +7,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@polyphorm/crawler-mongo": "^1.0.0"
+    "@polyphorm/crawler-mongo": "^1.0.0",
+    "@polyphorm/crawler-test-utils": "^1.0.0"
   },
   "devDependencies": {
     "jest": "^25.4.0"

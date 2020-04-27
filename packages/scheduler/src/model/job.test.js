@@ -1,19 +1,19 @@
-const mongo = require('@polyphorm/crawler-mongo')
+const testUtils = require('@polyphorm/crawler-test-utils')
 const Job = require('./job')
 
 describe('job model', () => {
   let job
 
   beforeAll(async () => {
-    await mongo.connect('mongodb://localhost/polyphorm-crawler-test')
+    await testUtils.database.connect()
   })
 
   beforeEach(async () => {
-    await Job.remove({})
+    await testUtils.database.drop(Job)
   })
 
   afterAll(async () => {
-    await mongo.disconnect()
+    await testUtils.database.disconnect()
   })
 
   describe('save', () => {
