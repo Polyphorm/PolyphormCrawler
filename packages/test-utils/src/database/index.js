@@ -5,8 +5,8 @@ module.exports = {
     await mongo.connect('mongodb://localhost/polyphorm-crawler-test')
   },
 
-  async drop (...models) {
-    await Promise.all(models.map(model => model.remove({})))
+  async drop () {
+    await mongo.getConnection().db.dropDatabase()
   },
 
   async disconnect () {

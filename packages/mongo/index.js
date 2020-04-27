@@ -5,7 +5,10 @@ let conn
 
 module.exports = {
   async connect (connectionString) {
-    conn = await instance.connect(connectionString)
+    conn = await instance.connect(connectionString, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
   },
 
   getInstance () {

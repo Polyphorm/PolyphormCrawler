@@ -4,17 +4,9 @@ const Job = require('./job')
 describe('job model', () => {
   let job
 
-  beforeAll(async () => {
-    await testUtils.database.connect()
-  })
-
-  beforeEach(async () => {
-    await testUtils.database.drop(Job)
-  })
-
-  afterAll(async () => {
-    await testUtils.database.disconnect()
-  })
+  beforeAll(testUtils.database.connect)
+  beforeEach(testUtils.database.drop)
+  afterAll(testUtils.database.disconnect)
 
   describe('save', () => {
     describe('name property not set', () => {
@@ -53,7 +45,8 @@ describe('job model', () => {
       test('saves entity', async () => {
         await job.save()
 
-        const jobs = await Job.find({})
+        const jobsResults = await Job.find({})
+        const jobs = jobsResults.map(job => job.toObject())
 
         expect(jobs.length).toBe(1)
         expect(jobs[0].name).toEqual('test1')
