@@ -12,7 +12,8 @@ describe('job definition model', () => {
     describe('name property not set', () => {
       beforeEach(() => {
         jobDefinition = new JobDefinition({
-          cronExpression: 'test'
+          cronExpression: 'test',
+          definition: {}
         })
       })
 
@@ -24,7 +25,8 @@ describe('job definition model', () => {
     describe('cronExpression property not set', () => {
       beforeEach(() => {
         jobDefinition = new JobDefinition({
-          name: 'test'
+          name: 'test',
+          definition: {}
         })
       })
 
@@ -38,7 +40,9 @@ describe('job definition model', () => {
       beforeEach(() => {
         jobDefinition = new JobDefinition({
           name: 'test1',
-          cronExpression: 'test2'
+          cronExpression: 'test2',
+          definition: {
+          }
         })
       })
 
@@ -51,6 +55,42 @@ describe('job definition model', () => {
         expect(jobDefinitions.length).toBe(1)
         expect(jobDefinitions[0].name).toEqual('test1')
         expect(jobDefinitions[0].cronExpression).toEqual('test2')
+      })
+    })
+
+    describe('unknown job definition status', () => {
+      beforeEach(() => {
+        jobDefinition = new JobDefinition({
+          name: 'test1',
+          cronExpression: 'test2',
+          definition: {
+            status: 'unknown'
+          }
+        })
+      })
+
+      test('throws error', async () => {
+        await expect(jobDefinition.save()).rejects
+          .toThrow('JobDefinition validation failed: definition.status: `unknown` is not a valid enum value for path `status`., definition: Validation failed: status: `unknown` is not a valid enum value for path `status`.')
+      })
+    })
+
+    describe('missing initial resource uri', () => {
+      beforeEach(() => {
+        jobDefinition = new JobDefinition({
+          name: 'test1',
+          cronExpression: 'test2',
+          definition: {
+            initialResources: [
+              {}
+            ]
+          }
+        })
+      })
+
+      test('throws error', async () => {
+        await expect(jobDefinition.save()).rejects
+          .toThrow('JobDefinition validation failed: definition.initialResources.0.uri: Path `uri` is required., definition: Validation failed: initialResources.0.uri: Path `uri` is required.')
       })
     })
   })
