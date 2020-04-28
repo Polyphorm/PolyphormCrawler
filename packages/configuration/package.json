@@ -2,7 +2,9 @@
   "name": "@polyphorm/crawler-configuration",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-  },
-  "license": "ISC"
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.6"
+  }
 }
