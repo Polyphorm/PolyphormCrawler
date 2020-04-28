@@ -5,6 +5,7 @@
   "scripts": {},
   "license": "ISC",
   "dependencies": {
-    "@polyphorm/crawler-configuration": "^1.0.0"
+    "@polyphorm/crawler-configuration": "^1.0.0",
+    "node-cron": "^2.0.3"
   }
 }
