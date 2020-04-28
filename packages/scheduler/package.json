@@ -2,8 +2,7 @@
   "name": "@polyphorm/crawler-scheduler",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "license": "ISC",
   "dependencies": {
     "@polyphorm/crawler-mongo": "^1.0.0",

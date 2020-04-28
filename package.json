@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist",
-    "lint": "lerna run lint",
+    "lint": "eslint .",
     "test": "jest --config=jest.config.js",
     "checks": "npm run lint && npm run test"
   },

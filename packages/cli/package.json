@@ -2,9 +2,7 @@
   "name": "@polyphorm/crawler-cli",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "lint": "eslint ."
-  },
+  "scripts": {},
   "license": "ISC",
   "dependencies": {
     "@polyphorm/crawler-manager": "^1.0.0",
