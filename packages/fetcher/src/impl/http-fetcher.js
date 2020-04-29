@@ -5,6 +5,10 @@ module.exports = {
   async fetch (resource) {
     const response = await axios.get(resource.url)
     const content = response.data
-    return { content }
+
+    return {
+      url: response.request._currentUrl,
+      content
+    }
   }
 }
