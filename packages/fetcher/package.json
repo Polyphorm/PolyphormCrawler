@@ -2,7 +2,9 @@
   "name": "@polyphorm/crawler-fetcher",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-  },
-  "license": "ISC"
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
