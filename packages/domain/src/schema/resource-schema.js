@@ -12,7 +12,8 @@ const ResSchema = new db.Schema({
 const FetcherConfigurationSchema = new db.Schema({
   type: {
     type: String,
-    required: true
+    required: true,
+    default: 'http'
   }
 }, {
   _id: false
@@ -21,7 +22,8 @@ const FetcherConfigurationSchema = new db.Schema({
 const ExtractorConfigurationSchema = new db.Schema({
   type: {
     type: String,
-    required: true
+    required: true,
+    default: 'jsdom'
   }
 }, {
   _id: false
@@ -37,6 +39,10 @@ const MetadataSchema = new db.Schema({
     required: true,
     default: 'pending',
     enum: ['pending', 'in-progress']
+  },
+  jobName: {
+    type: String,
+    required: true
   }
 }, {
   _id: false
@@ -49,15 +55,16 @@ module.exports = new db.Schema({
   },
   fetcherConfiguration: {
     type: FetcherConfigurationSchema,
-    required: true
+    required: true,
+    default: {}
   },
   extractorConfiguration: {
     type: ExtractorConfigurationSchema,
-    required: true
+    required: true,
+    default: {}
   },
   metadata: {
     type: MetadataSchema,
-    required: true,
-    default: {}
+    required: true
   }
 })

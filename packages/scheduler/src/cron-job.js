@@ -1,4 +1,9 @@
-const { models: { WorkerSlot } } = require('@polyphorm/crawler-domain')
+const {
+  models: {
+    WorkerSlot,
+    Resource
+  }
+} = require('@polyphorm/crawler-domain')
 
 module.exports = class CronJob {
   constructor (job) {
@@ -11,6 +16,14 @@ module.exports = class CronJob {
 
   async execute () {
     const jobName = this.name
+
+    await Resource.deleteMany({ 'metadata.jobName': jobName })
+
+    for (const resource of this.initialResources) {
+      const metadata = { jobName }
+      await new Resource(Object.assign({}, resource, { metadata })).save()
+    }
+
     await WorkerSlot.deleteMany({ jobName })
 
     for (let i = 0; i < this.concrrency; i++) {

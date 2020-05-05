@@ -4,13 +4,8 @@ module.exports = class Resource {
       url
     }
 
-    this.fetcherConfiguration = {
-      type: 'http'
-    }
-
-    this.extractorConfiguration = {
-      type: 'jsdom'
-    }
+    this.fetcherConfiguration = {}
+    this.extractorConfiguration = {}
   }
 
   withFetcherType (type) {
