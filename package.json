@@ -2,7 +2,7 @@
   "name": "@polyphorm/crawler",
   "version": "1.0.0",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
+    "bootstrap": "lerna bootstrap",
     "lint": "eslint .",
     "test": "jest --config=jest.config.js",
     "checks": "npm run lint && npm run test"

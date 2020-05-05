@@ -19,7 +19,5 @@ module.exports = {
       .map(job => scheduler.schedule(new CronJob(job)))
 
     await Promise.all(schedulerPromises)
-
-    console.log('finished')
   }
 }
