@@ -1,15 +1,13 @@
-const mongo = require('@polyphorm/crawler-mongo')
-
 module.exports = {
   async connect () {
-    await mongo.connect('mongodb://localhost/polyphorm-crawler-test')
+    // to implement
   },
 
   async drop () {
-    await mongo.getConnection().db.dropDatabase()
+    // to implement
   },
 
   async disconnect () {
-    await mongo.disconnect()
+    // to implement
   }
 }
