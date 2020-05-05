@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {},
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@polyphorm/crawler-extractor": "^1.0.0",
+    "@polyphorm/crawler-fetcher": "^1.0.0"
+  }
 }
