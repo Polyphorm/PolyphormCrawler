@@ -27,6 +27,21 @@ const ExtractorConfigurationSchema = new db.Schema({
   _id: false
 })
 
+const MetadataSchema = new db.Schema({
+  workedId: {
+    type: String,
+    default: null
+  },
+  status: {
+    type: String,
+    required: true,
+    default: 'pending',
+    enum: ['pending', 'in-progress']
+  }
+}, {
+  _id: false
+})
+
 module.exports = new db.Schema({
   res: {
     type: ResSchema,
@@ -39,5 +54,10 @@ module.exports = new db.Schema({
   extractorConfiguration: {
     type: ExtractorConfigurationSchema,
     required: true
+  },
+  metadata: {
+    type: MetadataSchema,
+    required: true,
+    default: {}
   }
 })
