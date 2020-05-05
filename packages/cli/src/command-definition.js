@@ -1,6 +1,8 @@
 const { program } = require('commander')
-const startCommand = require('./commands/start')
+const managerCommand = require('./commands/manager')
+const workerCommand = require('./commands/worker')
 
-startCommand.register(program)
+managerCommand.register(program)
+workerCommand.register(program)
 
 module.exports = program
