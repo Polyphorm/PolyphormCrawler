@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@polyphorm/crawler-configuration": "^1.0.0",
+    "@polyphorm/crawler-database": "^1.0.0",
     "@polyphorm/crawler-domain": "^1.0.0",
-    "@polyphorm/crawler-scheduler": "^1.0.0",
-    "mongoose": "^5.9.12"
+    "@polyphorm/crawler-scheduler": "^1.0.0"
   }
 }

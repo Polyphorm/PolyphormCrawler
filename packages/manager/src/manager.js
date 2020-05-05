@@ -1,14 +1,11 @@
-const mongoose = require('mongoose')
+const db = require('@polyphorm/crawler-database')
 const { loader: configurationLoader } = require('@polyphorm/crawler-configuration')
 const { models: { JobDefinition } } = require('@polyphorm/crawler-domain')
 const { scheduler, CronJob } = require('@polyphorm/crawler-scheduler')
 
 module.exports = {
   async run (config) {
-    await mongoose.connect(config.connection, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    })
+    await db.connect(config.connection)
     const jobsConfiguration = await configurationLoader.load(config.jobsConfigurationDir)
 
     await JobDefinition.deleteMany({})

@@ -2,5 +2,8 @@
   "name": "@polyphorm/crawler-database",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.12"
+  }
 }

@@ -1,5 +1,3 @@
-const mongoose = require('mongoose')
+const db = require('@polyphorm/crawler-database')
 
-const Schema = mongoose.Schema
-
-module.exports = new Schema({})
+module.exports = new db.Schema({})

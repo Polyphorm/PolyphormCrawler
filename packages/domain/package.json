@@ -5,6 +5,6 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.9.12"
+    "@polyphorm/crawler-database": "^1.0.0"
   }
 }

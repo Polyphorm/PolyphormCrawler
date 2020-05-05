@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const db = require('@polyphorm/crawler-database')
 const jobDefinitionSchema = require('../schema/job-definition-schema')
 
-module.exports = mongoose.model('JobDefinition', jobDefinitionSchema)
+module.exports = db.model('JobDefinition', jobDefinitionSchema)
