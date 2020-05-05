@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const commandDefinition = require('./src/command-definition')
+const commandParser = require('./src/command-parser')
 
-commandDefinition.parse(process.argv)
+commandParser.parse(process.argv)
