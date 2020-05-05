@@ -10,14 +10,10 @@ module.exports = {
 
     await JobDefinition.deleteMany({})
 
-    const definitionPromises = jobsConfiguration.jobs
-      .map(job => new JobDefinition(job).save())
-
+    const definitionPromises = jobsConfiguration.jobs.map(job => new JobDefinition(job).save())
     await Promise.all(definitionPromises)
 
-    const schedulerPromises = jobsConfiguration.jobs
-      .map(job => scheduler.schedule(new CronJob(job)))
-
+    const schedulerPromises = jobsConfiguration.jobs.map(job => scheduler.schedule(new CronJob(job)))
     await Promise.all(schedulerPromises)
   }
 }
