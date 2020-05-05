@@ -1,6 +1,9 @@
+const { Resource } = require('@polyphorm/crawler-domain')
+
 module.exports = class Context {
   constructor (url, document, resources, data, matcher) {
     return {
+      Resource,
       document,
       api: {
         environment: {
