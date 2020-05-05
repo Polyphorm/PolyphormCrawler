@@ -5,12 +5,12 @@ module.exports = {
     program.command('worker')
       .description('starts worker instance')
       .requiredOption('-c, --connection <connection>', 'database connection url')
-      .action(options => {
+      .action(async options => {
         const {
           connection
         } = options
 
-        worker.run({
+        await worker.run({
           connection
         })
       })

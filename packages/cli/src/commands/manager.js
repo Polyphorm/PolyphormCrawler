@@ -6,13 +6,13 @@ module.exports = {
       .description('starts manager instance')
       .requiredOption('-c, --connection <connection>', 'database connection url')
       .requiredOption('-d, --jobs-configuration-dir <jobsConfigurationDir>', 'directory with jobs configuration')
-      .action(options => {
+      .action(async options => {
         const {
           connection,
           jobsConfigurationDir
         } = options
 
-        manager.run({
+        await manager.run({
           connection,
           jobsConfigurationDir
         })

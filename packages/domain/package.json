@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.9.12"
+  }
 }

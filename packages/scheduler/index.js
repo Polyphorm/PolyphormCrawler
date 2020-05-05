@@ -1,3 +1,7 @@
 const scheduler = require('./src/scheduler')
+const CronJob = require('./src/cron-job')
 
-module.exports = scheduler
+module.exports = {
+  scheduler,
+  CronJob
+}
