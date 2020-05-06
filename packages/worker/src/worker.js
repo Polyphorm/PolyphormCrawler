@@ -1,7 +1,7 @@
 const workerSpawner = require('./process/worker-spawner')
 
 module.exports = {
-  run (config) {
-    workerSpawner.spawn(config.threads)
+  async run (config) {
+    workerSpawner.spawn(config.connection, config.threads)
   }
 }

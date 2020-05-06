@@ -7,7 +7,7 @@ module.exports = new db.Schema({
   },
   status: {
     type: String,
-    enum: ['pending', 'in-progress', 'occupied'],
+    enum: ['pending', 'in-progress'],
     required: true,
     default: 'pending'
   },
