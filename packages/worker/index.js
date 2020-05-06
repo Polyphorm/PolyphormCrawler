@@ -1,5 +1,3 @@
-module.exports = {
-  run () {
-    console.log('worker started')
-  }
-}
+const worker = require('./src/worker')
+
+module.exports = worker
